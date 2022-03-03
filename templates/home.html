@@ -1,0 +1,250 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adult census Salary Prediction</title>
+
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/styles.css">
+
+
+</head>
+
+<body>
+
+    <center>
+
+
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Adult census Salary Prediction</a>
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br>
+
+
+    <div class="container">
+
+
+
+        <form action="\predict" method="post">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">age</h5>
+                            <input type="int" name="age" id="age" required="required">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>                   
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">fnlwgt</h5>
+                            <input type="int" name="fnlwgt" id="fnlwgt" required="required">
+                        </div>
+                    </div>
+                </div>
+                
+                <br>
+                <br>
+                <br>
+                
+          
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">education_num</h5>
+                            <input type="int" name="education_num" id="education_num" required="required">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br> 
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">capital_gain</h5>
+                            <input type="int" name="capital_gain" id="capital_gain" required="required">
+                            </div>
+                        </div>
+                    </div>
+                <br>
+                <br>
+                <br>                
+            
+           
+              <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">capital_loss</h5>
+                        <input type="int" name="capital_loss" id="capital_loss" required="required">
+                    </div>
+           
+            </div>
+            </div>
+            <br>
+            <br>
+            
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">hours_per_week</h5>
+                        <input type="int" name="hours_per_week" id="hours_per_week" required="required">
+                    </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+         
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">workclass</h5>
+                        <!-- Total Stops -->
+                        <select name="workclass" required="required">
+                            <option value="Private">Private</option>
+                            <option value="Self_emp_not_inc">Self_emp_not_inc</option>
+                            <option value="Local_gov">Local_gov</option>
+                            <option value="workclass_mode">workclass_mode</option>
+                            <option value="State_gov">State_gov</option>
+                            <option value="Self_emp_inc">Self_emp_inc</option>
+                            <option value="Federal_gov">Federal_gov</option>
+                            <option value="Without_pay">Without_pay</option>
+                            <option value="Never_worked">Never_worked</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+                
+            <br>
+            <br>
+            <br>
+            <br>
+            
+         
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">education</h5>
+                            <!-- Total Stops -->
+                        <select name="education" required="required">
+                            <option value="Bachelors">Bachelors</option>
+                            <option value="HS_grad">HS_grad</option>
+                            <option value="Higher_Grade">Higher_Grade</option>
+                            <option value="Masters">Masters</option>
+                            <option value="Some_college">Some_college</option>
+                            <option value="Assoc_acdm">Assoc_acdm</option>
+                            <option value="Assoc_voc">Assoc_voc</option>
+                            <option value="Doctorate">Doctorate</option>
+                            <option value="Prof_school">Prof_school</option>
+                            <option value="Lower_Grade">Lower_Grade</option>
+                            <option value="Preschool">Preschool</option>
+                        </select>
+                    </div>
+                </div>
+            </div> 
+                
+            <br>
+            <br>
+            <br>
+            <br>
+            
+         
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">sex</h5>
+                            <!-- Total Stops -->
+                            <select name="sex" required="required">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+           <br>
+           <br>
+           <br>
+           <br>
+           
+        
+           <div class="col-md-6">
+               <div class="card">
+                   <div class="card-body">
+                       <h5 class="card-title">occupation</h5>
+                       <!-- Total Stops -->
+                       <select name="occupation" required="required">
+                           <option value="Adm_clerical">Adm_clerical</option>
+                           <option value="Exec_managerial">Exec_managerial</option>
+                           <option value="Handlers_cleaners">Handlers_cleaners</option>
+                           <option value="Prof_specialty">Prof_specialty</option>
+                           <option value="Other_service">Other_service</option>
+                           <option value="Sales">Sales</option>
+                           <option value="Craft_repair">Craft_repair</option>
+                           <option value="Transport_moving">Transport_moving</option>
+                           <option value="Farming_fishing">Farming_fishing</option>
+                           <option value="Machine_op_inspct">Machine_op_inspct</option>
+                           <option value="Tech_support">Tech_support</option>
+                           <option value="Protective_serv">Protective_serv</option>
+                           <option value="Armed_Forces">Armed_Forces</option>
+                           <option value="Priv_house_serv">Priv_house_serv</option>
+                       </select>
+                   </div>
+               </div>
+           </div>     
+                
+
+         <input type="Submit" value = "Submit" style="height:75px; width:75px ; margin-left: 45%"/>   
+        </form>
+
+        <br/> 
+        <br/> 
+
+        <h4 style="text-align: center;"></br> &nbsp;&nbsp;{{prediction_text}}</h4>
+
+ 
+        
+        
+ 
+       
+
+
+
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    </center>
+
+</body>
+
+</html>
